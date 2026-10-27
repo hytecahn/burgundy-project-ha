@@ -1,2 +1,4 @@
-# burgundy-project-ha
-Home Assistant installation catalog only. Application source and container images remain private.
+# Burgundy Project · HA 설치 목록
+
+앱 설치 정보만 담는 목록입니다. 소스와 실행 이미지는 비공개입니다.
+HA에 비공개 이미지 읽기 인증을 설정한 뒤 설치합니다. 계좌 키를 이 저장소에 올리지 마세요.

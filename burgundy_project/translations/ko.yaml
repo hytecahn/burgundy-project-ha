@@ -1,0 +1,72 @@
+configuration:
+  primary_account:
+    name: 계좌 1 · 토스 연결
+    description: 첫 번째 사용자의 별칭과 전용 API 키입니다.
+    fields:
+      alias:
+        name: 계좌 별칭
+        description: 대시보드와 동기화됩니다. 이미 열린 화면은 새로고침해 주세요.
+      client_id:
+        name: 토스 Client ID
+      client_secret:
+        name: 토스 Client Secret
+      account_seq:
+        name: 계좌 식별번호 · 선택 사항
+        description: 자동으로 선택할 계좌가 하나라면 비워 두세요.
+  secondary_account:
+    name: 계좌 2 · 토스 연결
+    description: 두 번째 사용자의 별칭과 전용 API 키입니다. 계좌 1의 키를 대신 사용하지 않습니다.
+    fields:
+      alias:
+        name: 계좌 별칭
+        description: 대시보드와 동기화됩니다. 이미 열린 화면은 새로고침해 주세요.
+      client_id:
+        name: 토스 Client ID
+      client_secret:
+        name: 토스 Client Secret
+      account_seq:
+        name: 계좌 식별번호 · 선택 사항
+        description: 자동으로 선택할 계좌가 하나라면 비워 두세요.
+  telegram:
+    name: 공통 · Telegram 알림
+    description: 두 계좌가 같은 봇을 사용하며 알림에는 계좌 별칭을 표시합니다.
+    fields:
+      enabled:
+        name: 연결 사용
+      bot_token:
+        name: Telegram 봇 토큰
+      chat_id:
+        name: Telegram 대화 ID
+      report_times_kst:
+        name: 성과 보고 시각 · 한국시간
+  mqtt:
+    name: 공통 · Home Assistant 연결
+    description: 두 계좌의 센서는 별도 식별자로 등록합니다. 내부 MQTT 서비스는 자동 연결을 우선합니다.
+    fields:
+      enabled:
+        name: 연결 사용
+      host:
+        name: MQTT 서버
+      port:
+        name: MQTT 포트
+      username:
+        name: MQTT 사용자
+      password:
+        name: MQTT 비밀번호
+      tls:
+        name: MQTT TLS 사용
+  system:
+    name: 공통 · 운영과 안전
+    description: 조회·기록·IP 알림과 실제 주문 전송 허용을 관리합니다.
+    fields:
+      poll_seconds:
+        name: 계좌 조회 간격 · 초
+      retention_days:
+        name: 기록 보관 기간 · 일
+      instance_id:
+        name: HA 센서 식별자
+      ip_check_enabled:
+        name: 공인 IP 변경 알림
+      allow_live_trading:
+        name: 실제 주문 전송 허용
+        description: 실거래 모드와 자동매매 ON도 별도로 필요합니다. 현재 작업에서는 끈 상태를 유지합니다.

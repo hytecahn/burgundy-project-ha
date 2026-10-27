@@ -1,0 +1,74 @@
+configuration:
+  primary_account:
+    name: Account 1 · Toss connection
+    description: Account 1 · Toss connection
+    fields:
+      alias:
+        name: Account alias
+        description: Synchronized with the dashboard. Refresh an already-open configuration
+          page.
+      client_id:
+        name: Toss Client ID
+      client_secret:
+        name: Toss Client Secret
+      account_seq:
+        name: Account sequence · optional
+        description: Leave empty when there is only one eligible account.
+  secondary_account:
+    name: Account 2 · Toss connection
+    description: Account 2 · Toss connection
+    fields:
+      alias:
+        name: Account alias
+        description: Synchronized with the dashboard. Refresh an already-open configuration
+          page.
+      client_id:
+        name: Toss Client ID
+      client_secret:
+        name: Toss Client Secret
+      account_seq:
+        name: Account sequence · optional
+        description: Leave empty when there is only one eligible account.
+  telegram:
+    name: Shared · Telegram
+    description: Shared · Telegram
+    fields:
+      enabled:
+        name: Enable connection
+      bot_token:
+        name: Telegram bot token
+      chat_id:
+        name: Telegram chat ID
+      report_times_kst:
+        name: Report times · Korea time
+  mqtt:
+    name: Shared · Home Assistant
+    description: Shared · Home Assistant
+    fields:
+      enabled:
+        name: Enable connection
+      host:
+        name: MQTT host
+      port:
+        name: MQTT port
+      username:
+        name: MQTT username
+      password:
+        name: MQTT password
+      tls:
+        name: Use MQTT TLS
+  system:
+    name: Shared · Operation and safety
+    description: Shared · Operation and safety
+    fields:
+      poll_seconds:
+        name: Account polling interval · seconds
+      retention_days:
+        name: History retention · days
+      instance_id:
+        name: HA sensor identifier
+      ip_check_enabled:
+        name: Public IP change notifications
+      allow_live_trading:
+        name: Allow live order transmission
+        description: Live mode and automation ON are also required.
